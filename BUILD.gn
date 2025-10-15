@@ -1,0 +1,27 @@
+static_library("SmartOlderMonitor") {
+    sources = [
+        "src/main.c",
+        "drivers/sensors/mpu6050/mpu6050.c",
+        "drivers/sensors/max30102/max30102.c",
+        "drivers/wifi/bsp_wifi.c",
+        "drivers/sensors/max30102/kalman.c",
+        "drivers/sensors/max30102/kalman.h",
+    ]
+    include_dirs = [
+        ".",
+        "./include",
+        "//utils/native/lite/include",
+        "//kernel/liteos_m/kal/cmsis",
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        "//base/iothardware/peripheral/interfaces/inner_api",
+        "//base/iot_hardware/interfaces/kits/wifiiot_lite",
+        "//foundation/communication/wifi_lite/interfaces/wifiservice",
+        "drivers/wifi/bsp_wifi.h",
+        "drivers/sensors/max30102/max30102.h",
+        "drivers/sensors/mpu6050/mpu6050.h",
+        "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/mbedtls/include/mbedtls",
+        "//device/soc/hisilicon/hi3861v100/sdk_liteos/platform/os/Huawei_LiteOS/components/lib/libm/include",
+    ]
+    
+    
+}
